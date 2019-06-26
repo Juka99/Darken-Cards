@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Darken Cards | Home</title>
+  <link>index.html</link>
+  <description>Welcome to the Darken Cards home page. See what we are all about !</description>
+  <item>
+    <title>Darken Cards | About</title>
+    <link>about.html</link>
+    <description>Read everything about our company and what we do. Also read about our author and check out his work !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Rules</title>
+    <link>rules.html</link>
+    <description>Learn rules of the game and start winning !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Contact</title>
+    <link>contact.html</link>
+    <description>Get in touch with us ! Fill the form and tell us what you think about our game. We can't wait to hear from you !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Assassins</title>
+    <link>assassins.html</link>
+    <description>Here you can see all our assassins ! Take your pick !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Tanks</title>
+    <link>tanks.html</link>
+    <description>Here you can see all our tanks ! Take your pick !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Supports</title>
+    <link>supports.html</link>
+    <description>Here you can see all our supports ! Take your pick !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Andros</title>
+    <link>andros.html</link>
+    <description>Check out Andros, a deadly assissin who lost a lot as a kid !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Nora</title>
+    <link>nora.html</link>
+    <description>Check out Nora, a little shadowy girl that kills her targets fast and swift.</description>
+  </item>
+  <item>
+    <title>Darken Cards | Pharah</title>
+    <link>pharah.html</link>
+    <description>See Pharah, a dangerous queen on a quest to conquer all land !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Lagos</title>
+    <link>lagos.html</link>
+    <description>Meet Lagos, a dwarf and a keeper of tomb. Nobody gets past him !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Jorah</title>
+    <link>jorah.html</link>
+    <description>Meet Jorah, a royal general and a humble man with a sad family story.</description>
+  </item>
+  <item>
+    <title>Darken Cards | Levion</title>
+    <link>levion.html</link>
+    <description>We introduce to you Levion, the Ice Devil, and the biggest evil in whole game !</description>
+  </item>
+  <item>
+    <title>Darken Cards | Sargon</title>
+    <link>sargon.html</link>
+    <description>Check out Sargon, a blind clairvoyant that can see and alter future and shape it how he wants.</description>
+  </item>
+  <item>
+    <title>Darken Cards | Lorena</title>
+    <link>lorena.html</link>
+    <description>Meet Lorena, master of poison and an evil queen that wants to take revenge on her family.</description>
+  </item>
+  <item>
+    <title>Darken Cards | Rena and Mark</title>
+    <link>rena.html</link>
+    <description>Meet our two love birds, Rena and Mark ! Dont let their love full you, they are very dangerous.</description>
+  </item>
+</channel>
+
+</rss>

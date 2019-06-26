@@ -1,0 +1,1987 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+	font-family:'frozen'; 
+	src:url('fonts/frozen.ttf');
+}
+
+@keyframes move{
+    0%{top: 30px;}
+    50%{top: 0px;}
+    100%{top: 30px;}
+}
+
+@keyframes left{
+    0%{opacity: 0; padding-right: 10%;}
+    25%{opacity: 0; padding-right: 5%;}
+    100%{opacity: 1; padding-right: 0%;}
+}
+
+@keyframes right{
+    0%{opacity: 0; padding-left: 10%;}
+    70%{opacity: 0; padding-left: 5%;}
+    100%{opacity: 1; padding-left: 0%;}
+}
+
+@keyframes invi{
+    0%{opacity: 0;}
+    80%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes infiAssa { 
+    0%{background-position:0% 52%}
+    50%{background-position:100% 49%}
+    100%{background-position:0% 52%}
+}
+
+@keyframes infiTanks { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes infiSupp { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+$f: flex;
+$sa: space-around;
+$sb: space-between;
+$co: column;
+$w: wrap;
+$c: center;
+
+$d0: 1390px;
+$d1: 1120px;
+$d2: 992px;
+$d3: 850px;
+$d4: 696px;
+$d5: 610px;
+$d6: 500px;
+$d7: 450px;
+$d8: 386px;
+$d9: 530px;
+$d10: 400px;
+$d11: 768px;
+$special: 507px;
+
+@mixin d0 {
+    @media (max-width: #{$d0}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+
+@mixin d2 {
+    @media (max-width: #{$d2}){
+        @content;
+    }
+}
+
+@mixin d3 {
+    @media (max-width: #{$d3}){
+        @content;
+    }
+}
+
+@mixin d4 {
+    @media (max-width: #{$d4}){
+        @content;
+    }
+}
+
+@mixin d5 {
+    @media (max-width: #{$d5}){
+        @content;
+    }
+}
+
+@mixin d6 {
+    @media (max-width: #{$d6}){
+        @content;
+    }
+}
+
+@mixin d7 {
+    @media (max-width: #{$d7}){
+        @content;
+    }
+}
+
+@mixin d8 {
+    @media (max-width: #{$d8}){
+        @content;
+    }
+}
+
+@mixin d9 {
+    @media (max-width: #{$d9}){
+        @content;
+    }
+}
+
+@mixin d10 {
+    @media (max-width: #{$d10}){
+        @content;
+    }
+}
+
+@mixin d11 {
+    @media (max-width: #{$d11}){
+        @content;
+    }
+}
+
+@mixin special {
+    @media (max-width: #{$special}){
+        @content;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'frozen';
+}
+
+body{
+    background-color: black;
+    position: relative;
+}
+
+
+a:hover{
+    text-decoration: none;
+    background-image: none;
+}
+
+.nav1{
+    position: fixed;
+    top: 0px;
+}
+
+
+
+
+.g1{
+    margin-left: 2%;
+}
+
+
+.glass {
+	background-color: red;
+  	-webkit-background-clip: text;
+	background-size: contain;
+    color: red;
+    width: 100%;
+    font-weight: 900;
+    color: blueviolet;
+	margin: 0;
+	font-family: 'frozen', serif;
+    font-weight: 700;
+    font-size: 1.7em;
+    
+    @include d4{
+        font-size: 1.3em;
+    }
+
+    @include d6{
+        font-size: 1.1em;
+    }
+
+    @include d7{
+        font-size: 0.9em;
+    }
+
+    @include d8{
+        font-size: 0.8em;
+    }
+
+
+
+
+	
+	
+	&::before {
+		content: attr(data-heading);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: linear-gradient(45deg, rgba(255,255,255,0) 45%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
+		-webkit-background-clip: text;
+		color: transparent;
+		mix-blend-mode: screen;
+		animation: shine 1s infinite;
+		background-size: 200%;
+		text-shadow: 
+			2px 2px 10px rgba(#000, 0.2),
+			-2px 2px 10px rgba(#000, 0.2),
+			-2px -2px 10px rgba(#000, 0.2);
+	}
+}
+
+.aboGlass{
+
+    @include special{
+        font-size: 1em;
+    }
+
+    @include d10{
+        font-size: 0.8em;
+    }
+}
+
+@keyframes shine {
+	0% {background-position: -100%;}
+	100% {background-position: 100%;}
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+#logo1{
+    width: 200px;
+}
+
+.move{
+    margin-right: 2%;
+}
+
+.move1{
+    margin-top: 2%;
+}
+
+.links{
+    color: whitesmoke;
+    font-size: 1.6em;
+    font-family: 'frozen', serif;
+    transition: 0.5s;
+}
+
+.links:hover{
+    background-color: darken(white, 60%);
+    color: white;
+}
+
+.ico1{
+    color: lighten(blueviolet, 10%);
+}
+
+body{
+
+    .cover1{
+        height: 100vh;
+        background-image: url("images/cover.jpeg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0%;
+
+        .cover2{
+            height: 100vh;
+            background-color: rgba(0,0,0,0.45);
+            display: flex;
+            justify-content: center;
+
+            @include d4{
+                background-color: rgba(0,0,0,0.7);
+            }
+
+
+            .row{
+                width: 100%;
+                height: 100%;
+
+                .colo{
+                    flex-direction: $co;
+
+                    .head1{
+                        font-size: 4.5em;
+                        font-family: 'frozen', serif;
+                        color: darken(white, 10%);
+                        margin-top: 5%;
+                        animation: left 2s;
+
+                        @include d1{
+                            font-size: 3.7em;
+                        }
+
+                        @include d3{
+                            font-size: 2.9em;
+                        }
+
+                        @include d4{
+                            font-size: 3.5em;
+                            padding-bottom: 5%;
+                        }
+
+                        @include d6{
+                            font-size: 3em;
+                        }
+
+                        @include d8{
+                            font-size: 2.3em;
+                        }
+
+                        .spec{
+                            color: blueviolet;
+                            font-size: 1.1em;
+                        }
+                    }
+
+                    .par1{
+                        font-size: 2em;
+                        color: darken(white, 10%);
+                        font-weight: bold;
+                        font-family: 'frozen', serif;
+                        margin: 1% 0%;
+                        margin-bottom: 2%;
+                        animation: right 2s;
+
+                        @include d4{
+                            padding-bottom: 5%;
+                        }
+
+                        @include d6{
+                            font-size: 1.5em;
+                        }
+
+                        @include d8{
+                            font-size: 1.2em;
+                        }
+                    }
+
+                    .spec1{
+
+                        color: blue;
+                        text-decoration: none;
+                        background-image: none;
+                        animation: invi 3.5s;
+
+                    .down1{
+                        color: blueviolet;
+                        font-size: 4em;
+                        animation: move 2s infinite;
+                        position: relative;
+                    }
+
+                }
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: 0 0 3px black;
+}
+
+.colHead{
+    color: rgb(238, 37, 37);
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'frozen', serif;
+}
+
+.colSlogan{
+    font-family: 'frozen', serif;
+    font-size: 2em;
+}
+
+.r2{
+    display: $f;
+}
+
+.co12{
+    display: $f;
+}
+
+#picture1{
+    width: 100%;
+
+    @include d2{
+        margin-bottom: 7%;
+    }
+
+    .orw{
+        max-width: 100%;
+        
+        @include d2{
+            margin-left: 7%;
+        }
+    }
+}
+
+
+.jumb1{
+    margin-right: 15%;
+    background-color: lighten(black,50%);
+    background-color: #000;
+
+    @include d2{
+        margin-right: 0%;
+    }
+}
+
+.cc1{
+    padding-top: 5%;
+    margin: 5% 0px;
+}
+
+.t{
+    font-family: 'frozen', serif;
+    color: white;
+}
+
+.t1{
+    text-align: $c;
+    font-size: 5em;
+    color: red;
+    padding-bottom: 15%;
+
+    @include d0{
+        font-size: 4em;
+    }
+
+    @include d1{
+        font-size: 3.4em;
+    }
+
+    @include d7{
+        font-size: 3em;
+    }
+
+    @include d8{
+        padding-top: 10%;
+        font-size: 2.5em;
+    }
+    
+}
+
+.t2{
+    text-align: $c;
+    padding-top: 5%;
+    font-size: 5.8em;
+    color: blueviolet;
+    font-weight: bold;
+
+    @include d8{
+        font-size: 5.2em;
+    }
+}
+
+.t3{
+    text-align: $c;
+    font-size: 3em;
+    color: rgb(31, 179, 31);
+
+    @include d8{
+        font-size: 2.5em;
+    }
+}
+
+.t4{
+    font-size: 3.5em;
+    padding: 5% 0%;
+    text-shadow: 2.5px 2.5px grey;
+    text-align: center;
+
+    @include d7{
+        padding-bottom: 15%;
+    }
+}
+
+.t5{
+    font-size: 1.7em;
+    line-height: 43px;
+    text-align: justify;
+
+    @include d4{
+        font-size: 1.3em;
+    }
+}
+
+.t6{
+    font-size: 3em;
+    padding: 5% 0%;
+    text-align: $c;
+
+    @include d7{
+        font-size: 2.1em;
+    }
+
+    @include d8{
+        padding: 15% 0%;
+    }
+
+    span{
+        color: rgb(31, 179, 31);
+        font-size: 1.4em;
+    }
+}
+
+.t7{
+    font-size: 3em;
+    padding-bottom: 2%;
+    text-align: $c;
+
+    @include d6{
+        padding-bottom: 9%;
+    }
+
+    @include d7{
+        font-size: 2.3em;
+    }
+}
+
+.t8{
+    font-size: 1.5em;
+    text-align: $c;
+    border-left: 5px solid black;
+    text-shadow: 1.2px 1.2px rgb(201, 93, 21);
+
+    @include d2{
+        padding: 1% 0%;
+        font-size: 1.3em;
+    }
+
+    @include d8{
+        font-size: 1.2em;
+        padding: 3% 0%;
+    }
+}
+
+.jumb2{
+    background-color: #000;
+}
+
+.m1{
+    width: 55%;
+    margin: 0% auto;
+    margin-bottom: 10%;
+    border: 4px solid darken(red, 35%);
+
+    @include d1{
+        width: 62%;
+    }
+
+    @include d2{
+        width: 70%;
+        margin-bottom: 22%;
+    }
+
+    @include d3{
+        width: 80%;
+    }
+
+    @include d4{
+        width: 95%;
+    }
+
+    @include d6{
+        width: 100%;
+    }
+
+}
+
+.hero3{
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    margin: 3%;
+
+    p{
+        font-size: 1.9em;
+        font-weight: bold;
+        font-family: 'frozen', serif;
+        padding-bottom: 9%;
+
+        @include d1{
+            padding-bottom: 15%;
+        }
+
+        @include d5{
+            font-size: 1.3em;
+            padding-bottom: 20%;
+        }
+
+        @include d7{
+            padding-bottom: 28%;
+        }
+
+        @include d8{
+            padding-top: 10%;
+        }
+    }
+
+}
+
+.crazy{
+    transition: 0.7s;
+}
+ 
+
+.crazy:hover{
+    background-color: darken(red, 35%);
+}
+
+
+.crazy:hover p{
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+
+
+.hero2{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: tomato;
+    transition: 0.7s;
+    font-weight: bold;
+    font-family: 'frozen', serif;
+    padding-top: 1%; 
+
+    @include d5{
+        font-size: 1.3em;
+    }
+
+    @include d8{
+        font-size: 1.15em;
+    }
+}
+
+.r9{
+    margin-bottom: 15%;
+}
+
+.foo1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ft1{
+        font-size: 2.8em;
+        color: blueviolet;
+        font-family: 'frozen', serif;
+    }
+}
+
+.foo2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'frozen', serif;
+
+    .ft2{
+        font-size: 2.5em;
+    }
+
+    .ft3{
+        font-size: 1.3em;
+        color: grey;
+        transition: 0.7s;
+        padding: 0.5% 0%;
+
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+.fiksi{
+    position: absolute;
+}
+
+.r10{
+    border-top: 5px solid darken(grey, 20%);
+    padding: 3% 0%;
+
+    @include d3{
+        padding-top: 9%;
+        margin-bottom: 10%;
+    }
+}
+
+.p1{
+    font-size: 1.5em;
+    color: grey;
+    font-family: 'frozen', serif;
+
+    @include d5{
+        padding-bottom: 2%;
+    }
+
+    @include d7{
+        padding-bottom: 4%;
+    }
+}
+
+.contFooter{
+    width: 25%;
+    display: $f;
+    justify-content: $sa;
+    font-family: 'frozen', serif;
+
+    @include d3{
+        width: 35%;
+    }
+
+    @include d4{
+        width: 50%;
+    }
+
+    @include d7{
+        width: 90%;
+    }
+
+    .linkFooter{
+        font-size: 1.2em;
+        color: lighten(grey, 15%);
+        transition: 0.7s;
+        font-weight: bold;
+
+        @include d3{
+            font-size: 1em;
+        }
+
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+.ff123{
+
+    @include d5{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* About Us */
+
+.rowAbo{
+    padding: 10% 0%;
+    
+    @include d3{
+        margin-top: 5%;
+    }
+
+    @include d5{
+        margin-top: 10%;
+    }
+
+    @include d10{
+        margin-top: 20%;
+    }
+}
+
+.rowAbo0{
+    margin: 5% 0%;
+}
+
+.rowAbo1{
+    margin: 10% 0%;
+}
+
+.abCol{
+    font-family: 'frozen', serif;
+    padding-top: 6%;
+   
+    h2{
+        font-size: 4em;
+
+        @include d9{
+            font-size: 3.3em;
+        }
+
+        @include d7{
+            font-size: 2.8em;
+        }
+
+        @include d8{
+            font-size: 2.3em;
+        }
+    }
+}
+
+.lola{
+    width: 40%;
+}
+
+.h123{
+    font-size: 2em;
+}
+
+.kok{
+    font-size: 2em;
+    text-align: justify;
+    padding: 5%;
+    text-shadow: 1.5px 1.5px blueviolet;
+
+    @include d3{
+        font-size: 1.5em;
+    }
+
+    @include d6{
+        font-size: 1.2em;
+    }
+
+    @include d10{
+        font-size: 1em;
+    }
+}
+
+.picAbout{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/prva.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.pc2{
+    background-image: url('images/druga.jpg');
+}
+
+.pc3{
+    background-image: url('images/peta.jpg');
+    background-position: 0% 30%;
+}
+
+.autor{
+    margin: 3% 0%;
+    font-family: 'frozen', serif;
+
+
+        h2{
+            text-align: center;
+            font-size: 3.5em;
+            padding: 5% 0%;
+            color: rgb(167, 51, 51);
+
+            @include d10{
+                font-size: 2.7em;
+                padding: 10% 0%;
+            }
+        }
+
+        .rowAutor{
+            margin: 4% 0%;
+
+            .colUni{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include d2{
+                    margin-bottom: 8%;
+                }
+
+                .autorPicHolder{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include d2{
+                        width: 70%;
+                    }
+
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .colUni1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    font-size: 1.4em;
+                    padding: 5%;
+                    text-align: justify;
+                    line-height: 40px;
+                    color: whitesmoke;
+
+                    @include d9{
+                        font-size: 1.2em;
+                    }
+
+                    @include d8{
+                        font-size: 1em;
+                    }
+                    
+                }
+
+                .port{
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 5% 0%;
+
+                    @include d9{
+                        width: 90%;
+                    }
+
+                    a{
+                        font-size: 2em;
+                        color: whitesmoke;
+                        transition: 0.7s;
+
+                        &:hover{
+                            color: rgb(172, 47, 47);
+                        }
+                    }
+                }
+            }
+        }
+    
+}
+
+
+/* Assassins.html */
+
+.roAssa{
+    margin-top: 10%;
+
+    @include d3{
+        margin-top: 20%;
+    }
+
+    @include d6{
+        margin-top: 30%;
+    }
+}
+
+.coAssa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        color: rgb(221, 25, 25);
+        background: transparent;
+        font-size: 5em;
+        font-family: 'frozen', serif;
+
+        @include d6{
+            font-size: 4em;
+        }
+    }
+}
+
+.roAssa1{
+    margin: 5% 0%;
+}
+
+.coAssa1{
+    display: $f;
+    justify-content: $sa;
+    align-items: $c;
+    flex-wrap: wrap;
+
+    .champCard{
+        display: $f;
+        flex-direction: $co;
+        justify-content: $c;
+        align-items: $c;
+        width: 30%;
+
+        @include d0{
+            width: 40%;
+            margin-bottom: 5%;
+        }
+
+        @include d1{
+            width: 45%;
+        }
+
+        @include d2{
+            width: 55%;
+        }
+
+        @include d3{
+            width: 100%;
+        }
+
+
+        .glower{
+            padding: 4%;
+            display: $f;
+            justify-content: $c;
+
+
+
+            &:hover{
+                background: linear-gradient(270deg, #e19a25, #ec531a, #ff7606, #d24129);
+                background-size: 800% 800%;
+                -webkit-animation: infiAssa 3s ease infinite;
+                -moz-animation: infiAssa 3s ease infinite;
+                animation: infiAssa 3s ease infinite;
+
+                @include d6{
+                    background: none;
+                }
+            }
+
+            .champImageCard{
+                width: 100%;
+                display: $f;
+                justify-content: $c;
+
+                @include d6{
+                    width: 80%;
+                    border: 2px solid red;
+                    height: 500px;
+                }
+
+                @include d8{
+                    height: 350px;
+                }
+
+
+                &:hover .champImage{
+                    @include d6{
+                        transform: scale(1.05);
+                        border: none;
+                    }
+                }
+                .champImage{
+                    transition: 0.6s;
+                    height: auto;
+                    max-width: 100%;
+
+                }
+            }
+        }
+    }
+
+    .champName{
+        width: 100%;
+        display: $f;
+        flex-direction: $co;
+        justify-content: $c;
+        align-items: $c;
+        font-family: 'frozen', serif;
+
+        h3{
+            font-size: 2.8em;
+            padding-top: 2%;
+            color: rgb(168, 39, 39);
+
+        }
+
+        p{
+            font-size: 1.7em;
+            color: rgb(175, 179, 172);
+        }
+    }
+}
+
+/* Tanks.html */
+
+.coAssa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hAssa{
+        color: rgb(59, 168, 59);;
+        background: transparent;
+        font-size: 5em;
+        font-family: 'frozen', serif;
+
+        @include d6{
+            font-size: 4em;
+        }
+    }
+}
+
+.coAssa1{
+
+    .champCard{
+
+        .glower1{
+
+            &:hover{
+                background: linear-gradient(270deg, #35b997, #77c13c, #4eaa04, #b9e695);
+                background-size: 800% 800%;
+                -webkit-animation: infiTanks 3s ease infinite;
+                -moz-animation: infiTanks 3s ease infinite;
+                animation: infiTanks 3s ease infinite;
+
+                @include d6{
+                    background: none;
+                }
+            }
+
+            .cic1{
+                
+                @include d6{
+                    width: 80%;
+                    border: 2px solid rgb(137, 196, 49);
+                }
+            }
+        }
+
+        .cn1{
+
+            h3{
+                color: rgb(114, 194, 61);
+            }
+        }
+    }
+}
+
+/* supports.html */
+
+.coAssa{
+
+    .hAssa1{
+        color: rgb(174, 73, 214);
+    }
+}
+
+.coAssa1{
+
+    .champCard{
+
+        .glower2{
+
+            &:hover{
+                background: linear-gradient(270deg, #502fd5, #423c98, #3437b9, #4f5190);
+                background-size: 800% 800%;
+                -webkit-animation: infiSupp 4s ease infinite;
+                -moz-animation: infiSupp 4s ease infinite;
+                animation: infiSupp 4s ease infinite;
+
+                @include d6{
+                    background: none;
+                }
+            }
+
+            .cic2{
+                
+                @include d6{
+                    width: 80%;
+                    border: 2px solid rgb(128, 15, 204);
+                }
+            }
+        }
+
+        .cn2{
+
+            h3{
+                color: rgb(130, 64, 168);
+            }
+        }
+    }
+}
+
+/* Andros.html template */
+
+.fluid12{
+
+    margin: 10% 0%;
+    font-family: 'frozen';
+    display: flex;
+    justify-content: $c;
+    align-items: $c;
+
+    .soloRow{
+        width: 95%;
+        margin: 0px auto;
+
+        @include d2{
+            margin: 15% 0%;
+        }
+
+        .soloCol{
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+
+            .pictureHolder{
+                width: 60%;
+                border: 4px solid rgb(179, 45, 45);
+
+                .imageSpecial{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .tankHolder{
+                border: 4px solid rgb(45, 160, 45);
+            }
+
+            .suppHolder{
+                border: 4px solid blueviolet;
+            }
+
+            .headerSpec{
+                color: rgb(158, 44, 44);
+                font-size: 6em;
+
+                @include d2{
+                    font-size: 4.5em;
+                }
+
+                @include d11{
+                    padding-top: 8%;
+                }
+            }
+
+            .tankHead{
+                color: rgb(26, 153, 26);
+            }
+
+            .suppHead{
+                color: blueviolet;
+            }
+
+            .parSpec{
+                color: rgb(166, 153, 179);
+                font-size: 2em;
+                padding-bottom: 5%;
+            }
+
+            .parSpec1{
+                font-size: 3em;
+                color: whitesmoke;
+                padding-bottom: 2%;
+
+                @include d2{
+                    font-size: 2.5em;
+                }
+
+                @include d3{
+                    font-size: 2em;
+                }
+
+                .colorSpan{
+                    color: red;
+                    font-size: 1.3em;
+
+                    @include d6{
+                        font-size: 1em;
+                    }
+                }
+
+                .tankSpan{
+                    color: rgb(63, 202, 63);
+                }
+
+                .suppSpan{
+                    color: blueviolet;
+                }
+            }
+
+            .parSpec2{
+                font-size: 3em;
+                color: whitesmoke;
+
+                @include d2{
+                    font-size: 2.5em;
+                }
+
+                @include d3{
+                    font-size: 2em;
+                }
+
+                @include d7{
+                    font-size: 1.8em;
+                }
+
+                .colorSpan1{
+                    color: blueviolet;
+                    font-size: 1.3em;
+
+                    @include d0{
+                        font-size: 1.2em;
+                    }
+
+                    @include d1{
+                        font-size: 1em;
+                    }
+
+                    @include d6{
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .soloRow1{
+        margin: 5% 0%;
+        width: 100%;
+
+        @include d2{
+            margin: 20% auto;
+        }
+
+        .centerCol{
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            flex-direction: $co;
+
+            @include d2{
+                margin: 5% 0%;
+            }
+
+            @include d5{
+                margin: 10% 0%;
+            }
+
+            h3{
+                font-size: 3em;
+                color: whitesmoke;
+                padding-bottom: 6%;
+                padding-top: 3%;
+
+                @include d6{
+                    font-size: 2.5em;
+                }
+
+                @include d7{
+                    font-size: 2em;
+                }
+            }
+
+            p{
+                color: rgb(156, 39, 39);
+                font-size: 1.2em;
+
+                @include d0{
+                    font-size: 1.4em;
+                    padding-top: 3%;
+                    text-align: center;
+                }
+            }
+
+            .tan12{
+                color: rgb(42, 187, 42);
+            }
+
+            .supp12{
+                color: rgb(151, 69, 228);
+            }
+
+            .bar{
+                width: 65%;
+                display: $f;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-bottom: 3%;
+
+                @include d0{
+                    width: 100%;
+                }
+
+                p{
+                    font-size: 2em;
+                    text-align: center;
+                }
+
+                .color1{
+                    color: rgb(177, 53, 53);
+                }
+
+                .color2{
+                    color: rgb(7, 163, 7);
+                }
+
+                .color3{
+                    color: rgb(94, 131, 209);
+                }
+
+                .bar1{
+                    width: 80%;
+                    display: $f;
+                    justify-content: flex-start;
+                    margin: 0px auto;
+
+                    
+
+                    .bar2{
+                        display: $f;
+                        justify-content: flex-end;
+                        align-items: $c;
+
+                        p{
+                            color: rgb(116, 45, 27);
+                        }
+                    }
+
+                    .and0{
+                        background-color: rgb(243, 55, 55);
+                        width: 90%;
+
+                        @include d1{
+                            width: 100%;
+                        }
+                        
+                    }
+
+                    .nor0{
+                        width: 100%;
+                    }
+
+                    .pha0{
+                        width: 80%;
+                    }
+
+                    .lag0{
+                        width: 50%;
+                    }
+
+                    .jor0{
+                        width: 60%;
+                    }
+
+                    .lev0{
+                        width: 65%;
+                    }
+
+                    .sar0{
+                        width: 60%;
+                    }
+
+                    .lor0{
+                        width: 40%;
+                    }
+
+                    .ren0{
+                        width: 65%;
+                    }
+
+                    .and1{
+                        background-color: rgb(58, 194, 58);
+                        width: 60%;
+
+                        @include d1{
+                            width: 70%;
+                        }
+
+                        @include d6{
+                            width: 80%;
+                        }
+                    }
+
+                    .nor1{
+                        width: 40%;
+                    }
+
+                    .pha1{
+                        width: 55%;
+                    }
+
+                    .lag1{
+                        width: 85%;
+                    }
+
+                    .jor1{
+                        width: 70%;
+                    }
+
+                    .lev1{
+                        width: 75%;
+                    }
+
+                    .sar1{
+                        width: 40%;
+                    }
+
+                    .lor1{
+                        width: 50%;
+                    }
+
+                    .ren1{
+                        width: 40%;
+                    }
+
+                    .and2{
+                        background-color: rgb(17, 90, 226);
+                        width: 35%;
+
+                        @include d1{
+                            width: 45%;
+                        }
+
+                        @include d6{
+                            width: 55%;
+                        }
+                    }
+
+                    .nor2{
+                        width: 70%;
+                    }
+
+                    .pha2{
+                        width: 45%;
+                    }
+
+                    .lag2{
+                        width: 60%;
+                    }
+
+                    .jor2{
+                        width: 80%;
+                    }
+
+                    .lev2{
+                        width: 100%;
+                    }
+
+                    .sar2{
+                        width: 70%;
+                    }
+
+                    .lor2{
+                        width: 65%;
+                    }
+
+                    .ren2{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    .soloRow2{
+        width: 100%;
+        margin: 3% auto;
+
+        .storyF{
+            display: flex;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+
+            h3{
+                font-size: 3.8em;
+                color: rgb(167, 43, 43);
+
+                @include d2{
+                    padding-bottom: 5%;   
+                }
+
+                @include d6{
+                    font-size: 2.6em;
+                    text-align: center;
+                    padding: 15% 0%;
+                }
+
+            }
+
+            .storyHead{
+                color: rgb(42, 175, 42);
+            }
+
+            .storyHead1{
+                color: blueviolet;
+            }
+
+            .specialStory{
+
+
+                @include d11{
+                    font-size: 3em;
+                }
+
+                @include d5{
+                    font-size: 4em;
+                    text-align: center;
+                }
+
+                @include d7{
+                    font-size: 2.5em;
+                }
+
+
+            }
+
+            p{
+                padding: 2% 0%;
+                color: whitesmoke;
+
+                @include d6{
+                    display: none;
+                }
+            }
+
+            .hiddenLink{
+                display: none;
+
+                @include d6{
+                    display: block;
+                    padding: 13px 22px;
+                    background-color: rgb(177, 61, 61);
+                    color: rgb(253, 253, 253);
+                }
+            }
+
+            .hiddenTank{
+                background-color: rgb(36, 167, 36);
+            }
+
+            .hiddenSupp{
+                background-color: blueviolet;
+            }
+        }
+    }
+}
+
+/* Contact.html */
+
+.contCont{
+    margin: 12% auto;
+    font-family: 'frozen';
+
+    @include d11{
+        margin-top: 20%;
+    }
+
+    @include d6{
+        margin: 30% 0% 15% 0%;
+    }
+
+    .contRow{
+            width: 100%;
+            margin: 0px auto;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+
+            h2{
+                color: blueviolet;
+                font-size: 3em;
+                padding-bottom: 3%;
+
+                @include d2{
+                    font-size: 2.5em;
+                }
+
+                @include d11{
+                    font-size: 1.7em;   
+                }
+
+                @include d6{
+                    font-size: 1.4em;
+                }
+
+                @include d10{
+                    font-size: 2em;
+                    text-align: center;
+                }
+
+            }
+
+            .contCol{
+
+                form{
+                    margin: 5% 0%;
+                    color: #fff;
+
+                    .input-field{
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        margin-top: 2%;
+                    }
+
+                    .sub{
+                        background-color: rgb(153, 57, 57);
+                        display: block;
+                        color: whitesmoke;
+                        margin: 4% auto;
+                        width: 18%;
+                        height: 40px;
+                        display: flex;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        &:hover{
+                            color: darken(white, 30%);
+                        }
+
+                        @include d11{
+                            width: 35%;
+                        }
+
+                        @include d8{
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+              /* label color */
+   .input-field label {
+    color: whitesmoke;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: blueviolet;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid blueviolet;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+  .input-field input[type=email]:focus + label{
+    color: blueviolet;
+  }
+
+  .input-field input[type=email]:focus {
+    border-bottom: 1px solid blueviolet;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+  .input-field #textarea1:focus + label{
+      color: blueviolet;
+  }
+
+  .input-field #textarea1:focus{
+    border-bottom: 1px solid blueviolet;
+    box-shadow: 0 1px 0 0 #000;
+}
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid rgb(53, 161, 53);
+    box-shadow: 0 1px 0 0 rgb(53, 161, 53);
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid rgb(189, 51, 51);
+    box-shadow: 0 1px 0 0 rgb(189, 51, 51);
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: blueviolet;
+  }
+        
+}
+}
+
+/* rules.html */
+
+.rulesCont{
+    margin: 10% auto;
+    text-align: center;
+    font-family: 'frozen';
+
+    @include d2{
+        margin: 15% auto;
+    }
+
+    @include d11{
+        margin: 25% auto;
+    }
+
+    @include d7{
+        margin: 35% auto;
+    }
+
+    h2{
+        font-size: 3.5em;
+        color: blueviolet;
+
+        @include d7{
+            font-size: 2.4em;
+        }
+
+        @include d8{
+            font-size: 2.2em;
+        }
+    }
+
+    .rulPar{
+        font-size: 1.8em;
+        font-weight: bold;
+        padding: 7% 0%;
+        color: white;
+
+        @include d2{
+            font-size: 1.6em;
+        }
+
+        @include d11{
+            font-size: 1.4em;
+        }
+
+        @include d7{
+            font-size: 1.2em;
+        }
+
+        @include d8{
+            font-size: 1.1em;
+        }
+    }
+
+    .modBut{
+        background-color: rgb(145, 43, 43);
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        width: 20%;
+        padding: 2% 0%;
+        margin: 0px auto;
+        color: white;
+
+        &:hover{
+            background-color: darken(red, 20%);
+        }
+
+        @include d2{
+            width: 30%;
+            padding: 3% 0%;
+        }
+
+        @include d11{
+            width: 35%;
+            padding: 4% 0%;
+        }
+
+        @include d8{
+            width: 45%;
+        }
+    }
+
+    .mod1{
+        background-color: #000;
+        
+        h4{
+            font-size: 3em;
+            color: rgb(158, 55, 55);
+        }
+
+        p{
+            font-size: 2em;
+            color: rgb(146, 17, 17);
+
+            @include d5{
+                font-size: 1.6em;
+            }
+        }
+
+        .player{
+            width: 50%;
+            margin: 0px auto;
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            margin-bottom: 1%;
+
+            @include d1{
+                width: 80%;
+            }
+
+            @include d3{
+                width: 100%;
+            }
+
+            @include d6{
+                flex-direction: $co;
+                margin-bottom: 3%;
+            }
+
+            p{
+                color: rgb(207, 60, 60);
+            }
+        }
+
+        .player:first-of-type{
+            margin-top: 2%;
+        }
+    }
+
+    .mod2{
+        background-color: lighten(black, 10%);
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+
+        a{
+            color: whitesmoke;
+            display: block;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            width: 7%;
+            background-color: rgb(156, 46, 46);
+            transition: 0.4s;
+
+            @include d1{
+                width: 10%;
+            }
+
+            @include d3{
+                width: 15%;
+            }
+
+            @include d5{
+                width: 25%;
+            }
+
+            &:hover{
+                color: lighten(red, 15%);
+            }
+        }
+
+    }
+
+}
+
+.rulGlass{
+
+    @include d9{
+        font-size: 1.1em;
+    }
+
+    @include d7{
+        font-size: 0.8em;
+    }
+}
